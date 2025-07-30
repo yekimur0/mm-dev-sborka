@@ -1,0 +1,27 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+@import "fancybox";
+
+// components
+
+@import "./components/dev-hero";
+@import "./components/dev-problems";
+@import "./components/dev-order";
+@import "./components/dev-gift";
+@import "./components/dev-steps";
+@import "./components/dev-niche";
+@import "./components/dev-cases";
+@import "./components/dev-trusted";
+@import "./components/dev-faq";
+@import "./components/before-footer";
+@import "./components/dev-team";
+@import "./components/dev-crm";
+@import "./components/dev-about";
+@import "./components/dev-dev";
+
+body.swiper-no-scroll {
+  overflow: hidden;
+}

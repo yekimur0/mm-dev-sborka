@@ -1,0 +1,38 @@
+:root {
+  --font-family: "Gilroy", sans-serif;
+  --second-family: "Inter", sans-serif;
+  --third-family: "Stolzl", sans-serif;
+  --font3: "Formular", sans-serif;
+  --content-width: 1440px;
+  --container-offset: 10px;
+  --content-fluid-width: 1730px;
+
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --container-width-fluid: calc(
+    var(--content-fluid-width) + (var(--container-offset)) * 2
+  );
+  --black: #000;
+  --yellow: #ffbc00;
+  --white: #fff;
+  --gray: #767676;
+  --red: #ff122e;
+  --background-gray: #f5f5f5;
+  --seryy: #767676;
+  --index: calc(1vw + 1vh);
+  --ease-transition: 0.2s ease;
+  --bg-color: #0e0e0e;
+  --gradient: linear-gradient(
+      48deg,
+      #ffa202 0%,
+      #ffd130 35.91%,
+      #ffd130 60.06%,
+      #ffa202 100%
+    ),
+    linear-gradient(
+      49deg,
+      #ffbc00 0%,
+      #ffed00 35.91%,
+      #ffed00 60.06%,
+      #ffbc00 100%
+    );
+}

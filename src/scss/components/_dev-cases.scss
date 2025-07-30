@@ -1,0 +1,124 @@
+.dev-cases {
+  margin-bottom: 40px;
+  &-title {
+    font-family: var(--font-family);
+    font-weight: 900;
+    @include r-font(64, 32);
+    line-height: 120%;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  &-nav {
+    margin-bottom: clamp(30px, 3vw, 60px);
+  }
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .dev-cases-btn {
+    border: 1px solid var(--black);
+    border-radius: 60px;
+    padding: 8px 20px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+    color: var(--black);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    @include hover {
+      &:hover {
+        background-color: var(--yellow);
+      }
+    }
+  }
+
+  .dev-cases-container {
+    max-width: 1820px;
+    padding: 0 10px;
+    margin: 0 auto;
+  }
+
+  .dev-cases-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    @media (max-width: 992px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .dev-case-item {
+    position: relative;
+    height: 550px;
+    padding: 40px;
+    @media (max-width: 640px) {
+      height: 320px;
+      padding: 20px;
+    }
+    .dev-case-link {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
+    .dev-case-image {
+      position: absolute;
+      inset: 0;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+      }
+    }
+    .dev-case-title {
+      position: relative;
+      z-index: 1;
+      font-family: var(--font-family);
+      font-weight: 700;
+      @include r-font(28, 22);
+      line-height: 120%;
+      color: var(--white);
+      max-width: 480px;
+    }
+  }
+
+  .dev-cases-description {
+    position: relative;
+    padding: 54px 80px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    .dev-cases-description-bg {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      filter: drop-shadow(5px 5px 8px rgba(218, 178, 2, 1));
+    }
+    .subtitle {
+      font-family: var(--font-family);
+      font-weight: 700;
+      @include r-font(36, 24);
+      line-height: 130%;
+      text-transform: uppercase;
+      color: var(--white);
+      max-width: 650px;
+      span {
+        color: var(--yellow);
+        max-width: 650px;
+      }
+    }
+
+    .dev-btn--accent {
+      width: 100%;
+      @media (min-width: 767px) {
+        max-width: 300px;
+      }
+    }
+  }
+}
