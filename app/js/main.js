@@ -12662,6 +12662,20 @@ const dev_swiper_team = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.dev
     prevEl: '.dev-team-slider .prev',
     nextEl: '.dev-team-slider .next'
   },
+  breakpoints: {
+    320: {
+      slidesPerView: 2
+    },
+    768: {
+      slidesPerView: 2
+    },
+    1024: {
+      slidesPerView: 3
+    },
+    1300: {
+      slidesPerView: 4
+    }
+  },
   speed: 1500
 });
 const dev_swiper_sertificate = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.team-sertificate-swiper', {
@@ -12670,6 +12684,20 @@ const dev_swiper_sertificate = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"
   navigation: {
     prevEl: '.dev-team-sertificate-slider .prev',
     nextEl: '.dev-team-sertificate-slider .next'
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 2
+    },
+    768: {
+      slidesPerView: 2
+    },
+    1024: {
+      slidesPerView: 3
+    },
+    1300: {
+      slidesPerView: 5
+    }
   },
   speed: 1500
 });
@@ -13005,6 +13033,7 @@ __webpack_require__.r(__webpack_exports__);
 const listener = () => {
   document.addEventListener('click', e => {
     const contentBlock = document.querySelector('.dev-trusted-content-step');
+    console.log(e.target);
     if (contentBlock.classList.contains('_active')) {
       if (!e.target.closest('.dev-trusted-content-step') && !e.target.closest('g[data-step-number]')) {
         contentBlock.classList.remove('_active');
@@ -13026,6 +13055,12 @@ const listener = () => {
       if (activeBtn) activeBtn.classList.remove('_active');
       idBg.classList.add('_active');
       e.target.classList.add('_active');
+    }
+    if (e.target.classList.contains('dev-order-list-title')) {
+      console.log('dsad');
+      const parent = e.target.closest('li');
+      const desc = parent.querySelector('.dev-order-list-desc');
+      desc.classList.toggle('active');
     }
   });
 };

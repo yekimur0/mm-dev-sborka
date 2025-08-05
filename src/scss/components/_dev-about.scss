@@ -26,6 +26,9 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 10px;
       margin-bottom: 24px;
+      @media (max-width: 640px) {
+        grid-template-columns: 1fr;
+      }
       .future {
         display: flex;
         align-items: center;
@@ -34,21 +37,26 @@
         padding: 14px 24px;
         backdrop-filter: blur(100px);
         background: #d9d9d9;
-
+        @media (max-width: 640px) {
+          padding: 14px;
+        }
         .future-number {
           font-family: var(--font-family);
           font-weight: 700;
           font-size: 48px;
           color: var(--chernyy-tekst);
           span {
-            font-size: 18px;
+            font-size: clamp(14px, 1.5vw, 18px);
+          }
+          @media (max-width: 640px) {
+            font-size: 32px;
           }
         }
 
         p {
           font-family: var(--font-family);
           font-weight: 700;
-          font-size: 16px;
+          font-size: clamp(13px, 1.5vw, 16px);
           line-height: 130%;
           color: var(--chernyy-tekst);
           margin: 0;
@@ -61,6 +69,9 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
+    @media (max-width: 640px) {
+      grid-template-columns: 1fr;
+    }
     .content-col {
       display: flex;
       flex-direction: column;
@@ -125,6 +136,10 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 80px;
+      @media (max-width: 640px) {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
     }
 
     .image {
@@ -184,6 +199,10 @@
           &:nth-child(2) {
             top: 130px;
             left: 180px;
+            @media (max-width: 640px) {
+              left: 100px;
+              top: 70px;
+            }
           }
           &:nth-child(3) {
             bottom: 20px;
@@ -195,6 +214,10 @@
             right: 220px;
             @media (max-width: 1440px) {
               right: 200px;
+            }
+            @media (max-width: 640px) {
+              right: 100px;
+              top: 70px;
             }
           }
           &:nth-child(5) {
@@ -230,6 +253,9 @@
       visibility: hidden;
       transition: 0.3s ease;
       filter: blur(20px);
+      @media (max-width: 640px) {
+        padding: 20px 10px;
+      }
       &._active {
         display: block;
       }
@@ -243,7 +269,7 @@
       &-title {
         font-family: var(--font-family);
         font-weight: bold;
-        font-size: clamp(24px, 2.5vw, 28px);
+        font-size: clamp(20px, 2.5vw, 28px);
         line-height: 120%;
         display: grid;
         grid-template-columns: 40px 1fr;
@@ -264,7 +290,7 @@
       }
       &-desc {
         color: var(--white);
-        font-size: 16px;
+        font-size: clamp(14px, 1.5vw, 16px);
         font-weight: 400;
         line-height: 120%;
         margin-bottom: 30px;

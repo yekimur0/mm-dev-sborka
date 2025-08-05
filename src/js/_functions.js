@@ -49,6 +49,21 @@ const dev_swiper_team = new Swiper('.dev-team-swiper', {
     nextEl: '.dev-team-slider .next'
   },
 
+  breakpoints: {
+    320: {
+       slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+    },
+    1300: {
+      slidesPerView: 4,
+    }
+  },
+
 
   speed: 1500
 })
@@ -63,6 +78,20 @@ const dev_swiper_sertificate = new Swiper('.team-sertificate-swiper', {
     nextEl: '.dev-team-sertificate-slider .next'
   },
 
+  breakpoints: {
+    320: {
+       slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+    },
+    1300: {
+      slidesPerView: 5,
+    }
+  },
 
   speed: 1500
 })

@@ -5,6 +5,7 @@ export const listener = () => {
 
    document.addEventListener('click', (e) => {
     const contentBlock = document.querySelector('.dev-trusted-content-step');
+    console.log(e.target);
     if (contentBlock.classList.contains('_active')) {
         if (!e.target.closest('.dev-trusted-content-step') && !e.target.closest('g[data-step-number]')) {
         contentBlock.classList.remove('_active');
@@ -30,6 +31,13 @@ export const listener = () => {
 
         idBg.classList.add('_active');
         e.target.classList.add('_active');
+    }
+    if (e.target.classList.contains('dev-order-list-title')) {
+        console.log('dsad')
+        const parent = e.target.closest('li');
+        const desc = parent.querySelector('.dev-order-list-desc');
+
+        desc.classList.toggle('active');
     }
  });
 }

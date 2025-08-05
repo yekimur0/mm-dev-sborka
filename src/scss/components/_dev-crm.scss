@@ -2,6 +2,9 @@
   height: 1180px;
   padding-block: 120px;
   position: relative;
+  @media (max-width: 640px) {
+    height: 700px;
+  }
   .dev-crm-bg {
     position: absolute;
     inset: 0;
@@ -22,7 +25,9 @@
     max-width: 1140px;
     width: 100%;
     height: 820px;
-
+    @media (max-width: 640px) {
+      height: 100%;
+    }
     .derm-crm-item {
       position: absolute;
       top: 0;
@@ -30,6 +35,9 @@
       cursor: pointer;
       display: flex;
       align-items: flex-end;
+      @media (max-width: 640px) {
+        max-width: 70px;
+      }
       & > * {
         pointer-events: none;
       }
@@ -48,6 +56,12 @@
         opacity: 0;
         visibility: hidden;
         transition: 0.3s ease;
+        @media (max-width: 640px) {
+          width: 220px;
+          max-width: 320px;
+          padding: 14px 10px;
+          left: 0;
+        }
         &._active {
           opacity: 1;
           visibility: visible;
@@ -89,41 +103,75 @@
     ._amo {
       top: 11vw;
       left: 12vw;
+      @media (max-width: 640px) {
+        top: 93vw;
+      }
     }
     ._bitrix {
       right: 17vw;
       left: auto;
       top: 6vw;
+      @media (max-width: 640px) {
+        top: 85vw;
+        .crm-item-block {
+          left: -200px;
+        }
+      }
     }
     ._c {
       right: -4vw;
       left: auto;
       top: 16vw;
+      @media (max-width: 640px) {
+        right: 6vw;
+        top: 107vw;
+
+        .crm-item-block {
+          left: -200px;
+        }
+      }
     }
     ._ukassa {
       top: 24vw;
       left: 4vw;
+      @media (max-width: 640px) {
+        top: 122vw;
+      }
     }
     ._sklad {
       bottom: 2vw;
       top: auto;
       left: 16vw;
+      @media (max-width: 640px) {
+        bottom: 14vw;
+        left: 6vw;
+      }
     }
     ._cloud {
       top: auto;
       bottom: -6vw;
       left: 25vw;
+      @media (max-width: 640px) {
+        bottom: 5vw;
+      }
     }
     ._sbis {
       left: auto;
       right: 0;
       top: auto;
       bottom: -4vw;
+      @media (max-width: 640px) {
+        right: 80px;
+        bottom: 6vw;
+      }
     }
     ._robo-kassa {
       right: 10vw;
       left: auto;
       top: 19vw;
+      @media (max-width: 640px) {
+        top: 130vw;
+      }
     }
   }
 }

@@ -11,6 +11,9 @@
     flex-wrap: wrap;
     gap: 10px;
     margin-bottom: 40px;
+    @media (max-width: 640px) {
+      flex-direction: column;
+    }
     .item {
       display: flex;
       flex-direction: column;
@@ -93,6 +96,9 @@
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 30px;
+    @media (max-width: 640px) {
+      padding: 20px 10px;
+    }
     .subtitle {
       font-family: var(--font-family);
       font-weight: 700;

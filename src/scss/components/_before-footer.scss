@@ -2,6 +2,9 @@
   position: relative;
   padding: 85px 0 100px 0;
   margin-top: 120px;
+  @media (max-width: 640px) {
+    padding-top: 195px;
+  }
   .dev-before-footer-img {
     position: absolute;
     inset: 0;

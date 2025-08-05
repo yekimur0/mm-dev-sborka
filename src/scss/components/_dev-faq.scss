@@ -12,6 +12,9 @@
     display: grid;
     grid-template-columns: 1fr 465px;
     gap: 20px;
+    @media (max-width: 640px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   .dev-faq-items {
@@ -24,12 +27,18 @@
     border-radius: 16px;
     padding: 24px 40px;
     background: var(--white);
+    @media (max-width: 640px) {
+      padding: 20px 10px;
+    }
     &-head {
       display: grid;
       grid-template-columns: 1fr 48px;
       align-items: center;
       gap: 20px;
       cursor: pointer;
+      @media (max-width: 640px) {
+        grid-template-columns: 1fr 34px;
+      }
       & > * {
         pointer-events: none;
       }
@@ -49,7 +58,9 @@
       background: var(--black);
       border-radius: 50%;
       transition: 0.3s ease;
-
+      @media (max-width: 640px) {
+        height: 34px;
+      }
       & > * {
         transition: 0.3s ease;
       }
@@ -164,7 +175,7 @@
       transition: color 0.3s ease;
       text-align: left;
       margin-top: 20px;
-      margin-bottom: 40pxs;
+      margin-bottom: 40px;
       @include hover {
         &:hover {
           color: var(--yellow);
